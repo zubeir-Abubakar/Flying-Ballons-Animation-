@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lux||100DaysOfCode</title>
+	 <!-- register service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(() => { console.log("[ PWA Fire Bundle ] Service Worker Registered"); });
+            });
+        }  
+    </script>
+    <link rel="stylesheet" href="static/style.css">
+     <!-- start of web manifest -->
+    <link rel="manifest" href="./app.webmanifest">
+    <!-- end of web manifest -->
+	
+</head>
+<body>
+<div style="background: black" id="balloon-container">
+</div>
+
+</body>
+<script type="text/javascript" src="static/scripts.js"></script>
+</script>
+</html>
